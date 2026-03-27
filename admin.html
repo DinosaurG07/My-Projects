@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administrator | City Central Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">📚 City Central Library</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <ul id="main-menu" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a class="active" href="admin.html">Administrator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Staff & Librarian Clerk Portal</h1>
+      <p>
+        This section is restricted to authorized staff members. Use staff credentials
+        to view and manage borrowing records.
+      </p>
+    </section>
+
+    <section id="auth-panel" class="card auth-card">
+      <h2>Staff Sign In</h2>
+      <form id="staff-login-form">
+        <label for="staff-role">Role</label>
+        <select id="staff-role" required>
+          <option value="">Select role</option>
+          <option value="staff">Staff</option>
+          <option value="clerk">Librarian Clerk</option>
+        </select>
+
+        <label for="staff-passcode">Passcode</label>
+        <input id="staff-passcode" type="password" placeholder="Enter passcode" required />
+
+        <button type="submit" class="btn">Access Records</button>
+      </form>
+      <p id="auth-message" class="auth-message" aria-live="polite"></p>
+      <p class="small-text">
+        Demo credentials: <strong>staff2026</strong> or <strong>clerk2026</strong>.
+      </p>
+    </section>
+
+    <section id="records-panel" class="records-panel hidden" aria-label="Borrowing records">
+      <div class="panel-head">
+        <h2>Borrowed Books Register</h2>
+        <button id="logout-btn" class="btn btn-secondary" type="button">Log Out</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Reader Name</th>
+              <th>Book Name</th>
+              <th>Category</th>
+              <th>Date of Issue</th>
+              <th>Expected Return</th>
+              <th>Returned On</th>
+              <th>Penalty</th>
+              <th>Phone Number</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="records-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>For security, log out after use on shared systems.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Central Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">📚 City Central Library</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <ul id="main-menu" class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="admin.html">Administrator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to City Central Library</h1>
+        <p>
+          A community-driven public library focused on lifelong learning, literacy,
+          and equal access to knowledge for every reader.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="books.html">Browse Book Categories</a>
+          <a class="btn btn-secondary" href="#visit-info">Plan Your Visit</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats container" aria-label="Library statistics">
+      <article class="card">
+        <h2>Monthly Visitors</h2>
+        <p class="stat">12,500+</p>
+        <p>Readers, students, and researchers visit us every month.</p>
+      </article>
+      <article class="card">
+        <h2>Books in Collection</h2>
+        <p class="stat">58,000+</p>
+        <p>Across physical shelves and digital catalog resources.</p>
+      </article>
+      <article class="card">
+        <h2>Open Hours</h2>
+        <p class="stat">8 AM – 9 PM</p>
+        <p>Monday to Saturday (Sunday: 10 AM – 5 PM).</p>
+      </article>
+    </section>
+
+    <section id="visit-info" class="container info-grid">
+      <article class="card">
+        <h2>Address</h2>
+        <p>
+          City Central Library<br />
+          145 Knowledge Avenue<br />
+          Springfield, NY 11784, USA
+        </p>
+      </article>
+      <article class="card">
+        <h2>Contact Information</h2>
+        <p><strong>Phone:</strong> +1 (555) 201-4456</p>
+        <p><strong>Email:</strong> contact@citycentrallibrary.org</p>
+        <p><strong>Help Desk:</strong> Ground Floor, Service Counter</p>
+      </article>
+      <article class="card">
+        <h2>Library Services</h2>
+        <ul>
+          <li>Book lending and renewals</li>
+          <li>Children's reading club</li>
+          <li>Research and reference assistance</li>
+          <li>Digital archive access</li>
+          <li>Quiet study and group rooms</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 City Central Library. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
